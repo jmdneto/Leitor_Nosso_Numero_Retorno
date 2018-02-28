@@ -32,6 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CodigoseErros">
+      <HintPath>..\..\..\..\Documents\_svn\trunk\Common\DLLs\CodigoseErros.dll</HintPath>
+    </Reference>
+    <Reference Include="ConnPostNpgsql">
+      <HintPath>..\..\..\..\Documents\_svn\trunk\Common\DLLs\ConnPostNpgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Modelo_Negocio">
+      <HintPath>..\..\..\..\Documents\_svn\trunk\Common\DLLs\Modelo_Negocio.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.11.93, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Documents\_svn\trunk\Common\DLLs\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +53,25 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TipoCPF">
+      <HintPath>..\..\..\..\Documents\_svn\trunk\Common\DLLs\TipoCPF.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Leitor_Nosso_Numero_Retorno.BD.Conexao\openPost.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.BD.Consulta\CDadosRetornoBD.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.BD.Inclusao\ILinhasRemessa.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.IO.Log\LogErroTxt.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.Layouts\DadosArquivoRemessa.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.Layouts\DadosRetornoBD.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.Layouts\Erros.cs" />
+    <Compile Include="Leitor_Nosso_Numero_Retorno.Processos\Ler_Arquivo_Remessa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
